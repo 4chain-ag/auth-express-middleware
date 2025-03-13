@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",  // Ensure compatibility with latest ES features
+        "module": "CommonJS",  // Use CommonJS to avoid issues with Node.js imports
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "declaration": true,
+        "resolveJsonModule": true
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["node_modules", "../../src/__tests/**/*"]
+}
