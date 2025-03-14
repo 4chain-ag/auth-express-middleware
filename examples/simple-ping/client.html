@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuthFetch Client</title>
+    <title>Manual BRC-103/104 Authentication Test</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-<h1>Client Authentication Test</h1>
-<button onclick="testAuthenticatedAPI()">Test API</button>
+<h1>Manual BRC-103/104 Authentication Test</h1>
+<p>This demonstrates the mutual authentication process without using AuthFetch</p>
+
+<div>
+    <button onclick="testAuthenticatedAPI()">Test API Automatic Way</button>
+</div>
+<div>
+    <button onclick="manualAuthFetch()">Run Manual Authentication Test</button>
+</div>
+
+<h2>Output:</h2>
 <pre id="output"></pre>
 
 <script type="module" src="client.js"></script>
+<script type="module" src="manual-client.js"></script>
 </body>
 </html>

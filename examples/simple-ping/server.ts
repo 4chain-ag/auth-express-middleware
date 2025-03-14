@@ -28,6 +28,11 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use((req, res, next) => {
+    console.log('Request headers:', req.headers);
+    next();
+});
+
 app.get('/public', function(req, res) {
     res.json({
         message: 'This is a public endpoint',
